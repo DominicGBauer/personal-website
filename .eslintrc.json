@@ -5,9 +5,18 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
+    "airbnb-typescript",
     "prettier"
   ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "plugins": [
     "import",
     "jsx-a11y",
@@ -23,6 +32,17 @@
     "react/prop-types": "off",
     "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
     "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "react/function-component-definition": [
       2,
       {
